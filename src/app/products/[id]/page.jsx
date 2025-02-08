@@ -91,4 +91,13 @@ export default async function ProductPages({ params }) {
   }
 
   return (
-    <div className="pt-[57px] pb-[173px] px-4 sm:px-[25px
+    <div className="pt-[57px] pb-[173px] px-4 sm:px-[25px] md:px-[120px] 2xl:px-60 3xl:px-[265px] xl:px-[150px] lg:px-[100px]">
+      <Click
+        name={product.title}
+        price={product.price}
+        src={urlFor(product.image).width(500).url()}
+      />
+      <FeatureComponent />
+    </div>
+  );
+}
