@@ -32,11 +32,11 @@ interface IProduct {
   nameClass?: string,
 }
 
-export const getProductData = async () => {
+const getProductData = async () => {
   const res = await client.fetch(`*[_type=='products']{
     title,
     _id,
-  badge, 
+    badge, 
     priceWithoutDiscount,
     category,
     price,
