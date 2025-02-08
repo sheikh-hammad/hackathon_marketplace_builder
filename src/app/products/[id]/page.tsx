@@ -6,10 +6,6 @@ import Click from "@/app/components/ui/Click";
 import FeatureComponent from "@/app/components/ui/FeatureComponent";
 import { urlFor } from "@/sanity/lib/image";
 
-// interface ProductPageProps {
-//   params: { id: string };
-// }
-
 interface IProduct {
   title: string;
   desc: string;
