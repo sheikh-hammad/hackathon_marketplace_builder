@@ -2,8 +2,6 @@
 import TopNav from "./ui/TopNav";
 import MiddleNav from "./ui/MiddleNav";
 import BottomNav from "./ui/BottomNav";
-import MobileNav from "./ui/MobileNav";
-import Link from "next/link"
 
 const Navigation = () => {
   return (

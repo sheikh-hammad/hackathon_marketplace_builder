@@ -1,6 +1,5 @@
 import React from "react";
 import { Product } from "./Product";
-import { Prods } from "../data/types";
 import Link from "next/link";
 import { getProductData } from "@/app/sanity";
 import { urlFor } from "@/sanity/lib/image";

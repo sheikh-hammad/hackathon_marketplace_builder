@@ -1,13 +1,11 @@
-import { IoCartOutline } from "react-icons/io5";
 import Image from "next/image";
 import { Star, ShoppingCart, Heart, Check } from "lucide-react";
 import AddToCartButton from "./AddToCartButton";
-import useState from "react";
-interface Params {
-  params: {
-    id: string;
-  };
-}
+// interface Params {
+//   params: {
+//     id: string;
+//   };
+// }
 
 interface Prop {
   name: string;
