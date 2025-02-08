@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
   return (
-    <form action="" onSubmit={(e) => e.preventDefault()} className="relative mx-auto w-max">
+    <form onSubmit={(e) => e.preventDefault()} className="relative mx-auto w-max">
       <input
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
