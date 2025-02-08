@@ -6,10 +6,8 @@ import Click from "@/app/components/ui/Click";
 import FeatureComponent from "@/app/components/ui/FeatureComponent";
 import { urlFor } from "@/sanity/lib/image";
 
-interface Params {
-  params: {
-    id: string;
-  };
+interface ProductPageProps {
+  params: { id: string };
 }
 
 interface IProduct {
@@ -32,22 +30,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProductPages({ params }: Params) {
-  const getProductData = async () => {
-    return await client.fetch(`*[_type=='products']{
-      title,
-      _id,
-      badge, 
-      priceWithoutDiscount,
-      category,
-      price,
-      description,
-      tags -> ,
-      image
-    }`);
-  };
+export default async function ProductPages({ params }: ProductPageProps) {
+  const products: IProduct[] = await client.fetch(`*[_type=='products']{
+    title,
+    _id,
+    badge, 
+    priceWithoutDiscount,
+    category,
+    price,
+    description,
+    tags -> ,
+    image
+  }`);
 
-  const products: IProduct[] = await getProductData();
   const product = products.find((prod) => prod._id === params.id);
 
   if (!product) {
