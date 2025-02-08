@@ -30,37 +30,37 @@ export const productSchema = defineType({
       title: "Product Image",
       type: "image",
     },
-    {
-      name: "category",
-      title: "Category",
-      type: "reference",
-      to: [{ type: "categories" }],
-    },
+    // {
+    //   name: "category",
+    //   title: "Category",
+    //   type: "reference",
+    //   to: [{ type: "categories" }],
+    // },
     {
       name: "description",
       title: "Product Description",
       type: "text",
     },
-    {
-      name: "inventory",
-      title: "Inventory Management",
-      type: "number",
-    },
-    {
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      of: [{ type: "string" }],
-      options: {
-        list: [
-          { title: "Featured", value: "featured" },
-          {
-            title: "Follow products and discounts on Instagram",
-            value: "instagram",
-          },
-          { title: "Gallery", value: "gallery" },
-        ],
-      },
-    },
+    // {
+    //   name: "inventory",
+    //   title: "Inventory Management",
+    //   type: "number",
+    // },
+    // {
+    //   name: "tags",
+    //   title: "Tags",
+    //   type: "array",
+    //   of: [{ type: "string" }],
+    //   options: {
+    //     list: [
+    //       { title: "Featured", value: "featured" },
+    //       {
+    //         title: "Follow products and discounts on Instagram",
+    //         value: "instagram",
+    //       },
+    //       { title: "Gallery", value: "gallery" },
+    //     ],
+    //   },
+    // },
   ],
 });

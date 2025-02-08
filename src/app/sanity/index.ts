@@ -8,10 +8,8 @@ export const getProductData = async () => {
       _id,
       badge, 
       priceWithoutDiscount,
-      category,
       price,
       description,
-      tags,
       image
   }`)
   return res
