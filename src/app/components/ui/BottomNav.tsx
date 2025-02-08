@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Links } from "../data/types";
-import { User, Heart} from "lucide-react";
+import { User, Heart } from "lucide-react";
 import SearchBar from "./SearchBar";
 
 const BottomNav = () => {
@@ -28,12 +28,12 @@ const BottomNav = () => {
       </ul>
 
       <div className="flex ">
-        <Link href="/contact" className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center">
           <User className="text-[14px] text-[#333] size-4" />
           <p className="text-[14px] text-[#333] ">Login / Register</p>
-        <SearchBar/>
-        <Heart className="size-5 text-[#6b7280]" />
-        </Link>
+          <SearchBar />
+          <Heart className="size-5 text-[#6b7280]" />
+        </div>
       </div>
     </div>
   );
