@@ -24,6 +24,7 @@ interface IProduct {
   nameClass?: string;
 }
 
+// Only needed in App Router
 export async function generateStaticParams() {
   return Prods.map((product) => ({
     id: product.id.toString(),
@@ -31,6 +32,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProductPages({ params }: ProductPageProps) {
+  // Fetch products
   const products: IProduct[] = await client.fetch(`*[_type=='products']{
     title,
     _id,
@@ -43,10 +45,11 @@ export default async function ProductPages({ params }: ProductPageProps) {
     image
   }`);
 
+  // Find product by ID
   const product = products.find((prod) => prod._id === params.id);
 
   if (!product) {
-    notFound();
+    notFound(); // Trigger 404 if not found
   }
 
   return (
