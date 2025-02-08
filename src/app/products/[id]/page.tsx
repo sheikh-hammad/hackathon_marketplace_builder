@@ -32,7 +32,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProductPage({ params }: Params) {
+export default async function ProductPages({ params }: Params) {
   const getProductData = async () => {
     return await client.fetch(`*[_type=='products']{
       title,
