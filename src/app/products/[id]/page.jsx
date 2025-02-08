@@ -61,6 +61,7 @@
 import { notFound } from "next/navigation";
 import { client } from "../../../sanity/lib/client";
 import Click from "@/app/components/ui/Click";
+import { Prods } from "../../components/data/types";
 import FeatureComponent from "@/app/components/ui/FeatureComponent";
 import { urlFor } from "@/sanity/lib/image";
 
