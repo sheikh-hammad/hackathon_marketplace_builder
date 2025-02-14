@@ -20,7 +20,7 @@ export default function Button({ label, icon, addLabel, tickIcon }: ButtonProps)
     <button
       onClick={handleClick}
       className={`relative px-2 py-2 text-sm rounded-lg w-[185px] flex justify-center transition-all border-[#029fae] text-[#029fae] border-2 duration-200 active:scale-90 
-        
+    
       `}
     >
       <div className="flex gap-1">
